@@ -1,1 +1,0 @@
-﻿package {	import flash.events.Event;	public class CollapsedEvent extends Event	{		public static const ENDING_BTN_CLICKED:String = "endingBtnClicked";		public var index:int;				public function CollapsedEvent(type:String, index:int)		{			this.index = index;			super(type);		}	}}
