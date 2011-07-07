@@ -5,6 +5,8 @@
 Git Repository:
 git@github.com:visualgoodness/T_21stCentury_FreeFall_YoutubeMasthead.git
 
+**MAKE SURE YOUR DOUBLE CLICK COMPONENT IS UP TO DATE**
+
 DoubleClick Login:
 http://studio.doubleclick.com/login
 
