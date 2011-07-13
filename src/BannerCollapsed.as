@@ -1,4 +1,4 @@
-package
+﻿package
 {
 	import com.doubleclick.studio.events.StudioEvent;
 	import com.doubleclick.studio.expanding.ExpandingComponent;
@@ -33,11 +33,12 @@ package
 			initial_frame_overlay_mc.addEventListener(BannerEvent.ENDING_BTN_CLICKED, endingBtnClicked);
 			dcVideo.addEventListener(StudioEvent.ON_VIDEO_COMPLETE, videoComplete);
 			dcVideo.addEventListener(StudioEvent.ON_VIDEO_PLAY, videoPlay);
+			
 		}
 		
 		private function videoComplete(e:StudioEvent):void
 		{
-			
+			dcVideo.visible=false;
 		}
 		
 		private function videoPlay(e:StudioEvent):void
@@ -60,6 +61,8 @@ package
 		{
 			trace("doExpand");
 			ExpandingComponent.expand();
+			
+			
 		}
 		
 		private function endingBtnClicked(e:BannerEvent):void
@@ -68,6 +71,8 @@ package
 			dcVideo.pause();
 			gotoAndPlay("doExpand");
 			selectedEnding = e.index+1;
+			dcVideo.visible=false;
+			
 		}
 		
 		// Local connection for syching between banners
